@@ -1,35 +1,39 @@
 # Blog info
-blog_name: Forsigner
-slogan: Find the bug of the world
-url: http://www.forsigner.com
+#blog_name: 正念和我
+#blog_name: 正念之我
+#blog_name: 正念叨蜜
+blog_name: 正念多蜜
+#slogan: Code and debug
+slogan: Debug and fix
+url: http://zhengnian.me
 
 # Set avatar (Absolute url and relative url)
 avatar: /images/avatar.jpg
 
 # Set favicon
-favicon: /favicon.ico
+favicon: /images/favicon.png
 
 # For seo
-keywords: forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript
+keywords: 正念和我,正念之我,正念叨蜜,正念多蜜,Android,AOSP,Mobile,Java,Web,后端开发,Javascript,nodejs,Bash,Ubuntu,MySQL,Spring
 
 home_nav:
-  - name: Blog
-    url: /archives
-    target_blank: false #不在新页面打开
-  - name: Project
+  - name: 项目
     url: /project/
-    target_blank: true #在新页面打开
-  - name: Github
-    url: https://github.com/forsigner
-    target_blank: true
-  - name: Twitter
-    url: https://twitter.com/forsigner
-    target_blank: true
+    target_blank: false
+  - name: 博客
+    url: /archive
+    target_blank: false
+  - name: 找我
+    url: /about
+    target_blank: false
 
 # config page nav
 page_nav:
+  - name: 项目
+    url: /project/
+    target_blank: true #在新页面打开
   - name: 博客
-    url: /archives/
+    url: /archive/
     target_blank: false # 不在新页面打开
   - name: 分类
     url: /category/
@@ -40,7 +44,7 @@ page_nav:
   - name: 友链
     url: /link/
     target_blank: false
-  - name: 关于
+  - name: 找我
     url: /about/
     target_blank: false
   - name: RSS
@@ -48,7 +52,7 @@ page_nav:
     target_blank: true # 在新页面打开
   - name: 搜索
     url: /search/
-    target_blank: false # 在新页面打开
+    target_blank: true # 在新页面打开
 
 page_nav_style: CIRCLE  # CIRCLE|ROUND_RECT
 
@@ -63,11 +67,11 @@ toolbox:
 
 search_slogan:
   isShow: true # true|fase
-  text: Can you find the bug of world ~
+  text: Find me~
 
 link_slogan:
   isShow: true # true|fase
-  text: 交换友链可以邮件 forsigner@gmail.com
+  text: "交换友链可以邮件到：ander.joe.sun@gmail.com"
 
 
 # set backtop show or hide
@@ -83,7 +87,7 @@ backtop:
 donation:
   show: true
   btn_text: 支持一下
-  tip: 扫一扫，支持forsigner
+  tip: 扫一扫，赏乔风
   items:
     - type: 微信
       text: 微信扫一扫
@@ -91,9 +95,6 @@ donation:
     - type: 支付宝
       text: 支付宝扫一扫
       imgUrl: /images/qr-alipay.png
-
-
-
 
 post:
   header_align: CENTER # LEFT|CENTER
@@ -107,7 +108,7 @@ post:
 # =========================================================
 
 # Custom CSS style, 推荐把样式文件放在blog源码文件夹，而不是主题里面
-personal_style: /css/personal-style.css
+#personal_style: /css/your-styles.css
 
 # 这个值取决于你得背景图片是深色还是浅色，深色用dark，浅色用light
 home_background_scheme: light # dark、light
@@ -124,8 +125,8 @@ init_page_content: HOME_NAV  # HOME_NAV | POST
 # 第三方服务
 # =========================================================
 # Stats
-google_analytics: UA-38189205-1
-baidu_analytics: 57e94d016e201fba3603a8a2b0263af0
+google_analytics: ""
+baidu_analytics: ""
 
 # Comment service
 
@@ -143,13 +144,14 @@ changyan:
   changyan_appkey:
 
 # gitalk评论组件，把下面的配置换成你的，官方文档: https://gitalk.github.io/
+# 步骤：先登录github，然后创建一个认证应用：setting -> developer settings -> https://github.com/settings/developers -> https://github.com/settings/applications/new 取个名字，然后Homepage URL和callback URL都添写博客网址（如果你的博客使用了https，例如codings.net强制启用了https，则这二个项都必须https版的首页地址：例如：https://zhengnian.me，如果是http的，则会在url栏中出错：error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application），然后注册成功后会获得Client ID和Client Secret，把它们填下面，而owner和admin都必须是github的用户名。然后要根据下面的“repo”建相应名称的git仓库（如果不做此步，则博客网页相应处会报错：Error: Not Found），选public，然后创建，然后到settings中确认issues复选框已勾选，然后到点击code右边的issues标签来添加一个issue并提交，然后再到博客页面刷新一下就可以看到“未找到相关的issue评论，请联系xxx初始化创建”，这时只需让博主主点下“使用Github登录”来登录下github并点击相应的初始化按钮后就可以看到正常的评论界面了。这时其它用户可以评论了。最后要在layout/_partial/component/gitalk.ejs中截短下title以使得评论功能不受字数限制而正常使用（本主题默认已作处理，具体见gitalk.ejs）。
 gitalk:
   enable: true # 如果使用 gitalk，请设置改之为true
-  clientID: 277317290454635afa73
-  clientSecret: 78223c859304da5e8d71bfce136d436c6ff95c37
+  clientID: 318e6e0a541b38638345
+  clientSecret: 1f3ebda3ca2d983027f2188d3334b0a3a7001853
   repo: blog-comment
-  owner: forsigner
-  admin: forsigner
+  owner: AnderJoeSun
+  admin: AnderJoeSun
 
 
 # gitment comment service
@@ -181,9 +183,6 @@ valine:
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
 
-
-
-
 # 不算子,文章访问量统计和显示
 busuanzi: true
 
@@ -194,104 +193,40 @@ about:
   - type: me
     icon: icon-user
     text_value:
-    - "Scut，1991，Spring."
-    - "喜欢设计，擅长编程，喜欢睡懒觉."
-    - "前端开发工程师，常用 HTML / CSS / JavaScript."
+    - "追求极致效率的Android程序员"
+    - "Java/Android/AOSP/C/C++/Linux/JEE/JS/Python/Bash"
+    - "正在找新工作，期待能在大平台沉淀以稳定发展，欢迎HR大大们来撩~"
   - type: Github
     icon: icon-github
     text_key: Github
-    text_value: "@forsigner"
-    text_value_url: https://github.com/forsigner
-  - type: weibo
-    icon: icon-weibo
-    text_key: 微博
-    text_value: "@forsigner"
-    text_value_url: http://weibo.com/u/1847075964
+    text_value: "AnderJoeSun"
+    text_value_url: https://github.com/AnderJoeSun
   - type: mail
     icon: icon-mail
-    text_key: Gmail
-    text_value: "forsigner@gmail.com"
+    text_key: "Gmail"
+    text_value: "ander.joe.sun@gmail.com"
+    text_value_url: "mailto:ander.joe.sun@gmail.com"
   - type: location
     icon: icon-location
-    text_value: 珠海
+    text_value: 深圳
 
 link:
-  - name: 织网
-    info: 身体和灵魂，总有一个在路上
-    url: http://zheng-ji.info/
-    avatar: https://avatars3.githubusercontent.com/u/1414745?v=3&s=100
-  - name: Dongyado
-    info: 生命不止，折腾不息
-    url: http://dongyado.com/
-    avatar: https://avatars0.githubusercontent.com/u/6274940?v=3&s=100
-  - name: OrangeCoder
-    info: android ffmpeg nodejs gradle
-    url: http://orangecoder.com/
-    avatar: https://avatars0.githubusercontent.com/u/2263785?v=3&s=100
-  - name: EverET
-    info: 好记性不如烂笔头
-    url: http://everet.org/about-me/
-    avatar: https://avatars1.githubusercontent.com/u/1559563?v=3&s=100
-  - name: 题叶
-    info: FP, GUI, Writing
-    url: http://tiye.me/
-    avatar: https://avatars2.githubusercontent.com/u/449224?v=3&s=100
-  - name: McChen
-    info: Stay Hungry, Stay Foolish
-    url: https://chenjiahao.xyz
-    avatar: https://avatars0.githubusercontent.com/u/8033333?v=3&s=100
+  - name: Forsigner
+    info: 前端工程师
+    url: http://forsigner.com/
+    avatar: http://forsigner.com/images/avatar.jpg
 
 
 project:
   - type: personal
-    name: fexo
-    url: https://github.com/forsigner/fexo
-    intro: A minimalist design theme for hexo
-  # - type: company
-  #   name: Fexo
-  #   url: https://github.com/forsigner/fexo
-  #   intro: A minimalist design theme for hexo
+    name: AndroidDialer
+    url: http://zhengnian.me/2020/01/22/android.phone.app/
+    intro: "一个为长辈打造的、极简的、开源的Android电话应用，能与系统自带的电话应用并存，并可被设置为默认电话应用以替代系统自带的电话应用。"
   - type: personal
-    name: beside
-    url: https://github.com/forsigner/beside
-    intro: I need you beside me
+    name: MySettings
+    url: http://zhengnian.me/2013/06/20/bug023.a20.aosp4.2/
+    intro: "一个系统设置应用，方便Android系统开发者获得一些特殊的信息，例如：自动抽取桌面Launcher的布局并保存到一个xml文件中；获取最近运行应用的包名与类名信息等等。"
   - type: personal
-    name: web-fontmin
-    url: https://github.com/forsigner/web-fontmin
-    intro: 字体子集化，在线提取你需要的字体
-  - type: personal
-    name: magic-check
-    url: https://github.com/forsigner/magic-check
-    intro: Beautify Radio and Checkbox with pure CSS
-  - type: personal
-    name: nice-bar
-    url: https://github.com/forsigner/nice-bar
-    intro: A nice and lightweight scrollbar
-  - type: personal
-    name: angular-nice-bar
-    url: https://github.com/forsigner/angular-nice-bar
-    intro: A nice and lightweight scrollbar in Angular
-  - type: personal
-    name: fo-popover
-    url: https://github.com/forsigner/fo-popover
-    intro: A nice popover for Angular
-  - type: personal
-    name: fo-tooltip
-    url: A nice tooltip for Angular
-    intro: https://github.com/forsigner/fo-tooltip
-  - type: personal
-    name: fo-modal
-    url: https://github.com/forsigner/fo-modal
-    intro: A nice modal for Angular
-  - type: personal
-    name: mocer
-    url: https://github.com/forsigner/mocer
-    intro: Setup a mock server easily
-  - type: personal
-    name: node-pngdefry
-    url: https://github.com/forsigner/node-pngdefry
-    intro: Repairing iPhone fried PNGs using Node.js
-  - type: personal
-    name: ng-simditor
-    url: https://github.com/forsigner/ng-simditor
-    intro: Angular directive for simditor
+    name: JoyuChat
+    url: https://github.com/AnderJoeSun/JoyuChat
+    intro: "一款用Java开发的类似QQ的聊天软件。11年前的本科毕业设计作品，虽然代码现在看起来很丑，但当时的每一行都因她而很用心:) "  

@@ -5,7 +5,8 @@
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span><%= date(post.date, 'YYYY.MM.DD') %></span>
+        <span><%= date(post.date, 'YYYY.MM.DD') %></span>发布&nbsp;
+        <span><%= date(post.updated, 'YYYY.MM.DD') %></span>更新
       </span>
 
       <% if (config.author){ %>
