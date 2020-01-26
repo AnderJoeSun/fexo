@@ -1,5 +1,5 @@
-# Fexo updated by zhengnian.me
-1. 标签页中的所有标签按拼音的字母排列顺序进行排序（[查看效果](https://zhengnian.me/tag/)）
+# Fexo with sort by pinyin
+1. 添加功能：标签页中的所有标签按拼音的字母排列顺序进行排序（[查看效果](https://zhengnian.me/tag/)）
 
 2. 全部页面使用中文显示
 
