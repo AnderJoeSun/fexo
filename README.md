@@ -1,4 +1,4 @@
-# Updates by zhengnian.me
+# Fexo updated by zhengnian.me
 1. 标签页中的所有标签按拼音的字母排列顺序进行排序（[查看效果](https://zhengnian.me/tag/)）
 
 2. 全部页面使用中文显示
@@ -12,7 +12,7 @@ _建议使用Chrome访问_
 # 开发文档
 [本博客的源码工程：极简风格的Hexo主题](https://zhengnian.me/2015/12/25/source.projects.of.this.blog/)
 
-# Fexo
+# Original Fexo
 
 > A minimalist design theme for Hexo.
 
