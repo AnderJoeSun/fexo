@@ -1,7 +1,8 @@
 <section class="category-box">
   <div class="category-title"><%= __('categories') %></div>
   <div class="category-list">
-    <% site.categories.sort('name').each(function (category, i) { %>
+    <% sort_tags_by_pinyin(); %>
+    <% site.categories.each(function (category, i) { %>
       <a class="category-item" href="#<%= category.name %>">
         <span class="category-name"><%= category.name%></span>
         <span class="category-size">( <%= category.length %> )</span>

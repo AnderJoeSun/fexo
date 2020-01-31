@@ -1,7 +1,7 @@
 <div class="content content-category">
   <%- partial('_partial/component/page-header', {location: __('location.categories')}) %>
   <%- partial('_partial/component/category-box') %>
-  <%- getPostListsDom(site.categories.sort('name')) %>
+  <%- getPostListsDom(site.categories) %>
 </div>
 
 <%- partial('_partial/component/back-top', {showBacktop: theme.backtop.category}) %>
